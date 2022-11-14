@@ -9,6 +9,8 @@ let inputThird;
 let inputFourth;
 let inputFifth;
 let foundNumbers = [];
+let time = 30;
+const timerEl = document.querySelector(".timer");
 
 
 // genero un insieme di cinque numeri casuali
@@ -26,7 +28,7 @@ function generateRandomList (x, y) {
         const randomNum = generateRandomNumber( x, y );
     
         if ( !randomList.includes( randomNum ) ) {
-
+032
         randomList.push( randomNum );
         }
 
@@ -43,6 +45,21 @@ console.log(randomList);
 numberContainerEl.innerHTML = randomList;
 
 setTimeout(timer, 30000);
+
+// function startTimer (){
+//     setInterval (function () {
+
+//         // decremento i secondi passati
+//         time--;
+
+//         // invoco la funzione che aggiorna l'html
+//         updateTimerEl(time);
+//     }, 1000);
+// }
+
+// function updateTimerEl(seconds) {
+//     timerEl.textContent = `${seconds}`;
+// }
 
 function timer () {
     numberContainerEl.innerHTML = "";
