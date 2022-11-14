@@ -1,6 +1,14 @@
 // assegno e definisco le variabili
 let randomList = [];
 const numberContainerEl = document.querySelector (".number-container");
+let numberFoundEl = document.querySelector (".tot-numeri-trovati");
+let idFoundNumEl = document.querySelector (".id-num-trovati");
+let inputFirst;
+let inputSecond;
+let inputThird;
+let inputFourth;
+let inputFifth;
+let foundNumbers = [];
 
 
 // genero un insieme di cinque numeri casuali
@@ -38,7 +46,35 @@ setTimeout(timer, 30000);
 
 function timer () {
     numberContainerEl.innerHTML = "";
-    prompt("inserisci il primo numero della serie");
+
+    inputFirst = prompt("inserisci il primo numero della serie");
+    if (randomList.includes(parseInt(inputFirst))) {
+        foundNumbers.push ( inputFirst ) ;
+    } 
+    console.log(foundNumbers);
+    inputSecond = prompt("inserisci il secondo numero della serie");
+    if (randomList.includes(parseInt(inputSecond))) {
+        foundNumbers.push ( inputSecond ) ;
+    } 
+    console.log(foundNumbers);
+    inputThird = prompt("inserisci il terzo numero della serie");
+    if (randomList.includes(parseInt(inputThird))) {
+        foundNumbers.push ( inputThird ) ;
+    } 
+    console.log(foundNumbers);
+    inputFourth = prompt("inserisci il quarto numero della serie");
+    if (randomList.includes(parseInt(inputFourth))) {
+        foundNumbers.push ( inputFourth ) ;
+    } 
+    console.log(foundNumbers);
+    inputFifth = prompt("inserisci il quinto89 numero della serie");
+    if (randomList.includes(parseInt(inputFifth))) {
+        foundNumbers.push ( inputFifth ) ;
+    } 
+    console.log(foundNumbers);
+    
+    numberFoundEl.innerHTML = foundNumbers.length;
+    idFoundNumEl.innerHTML = foundNumbers;
 }
 
 
