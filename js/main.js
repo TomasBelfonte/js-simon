@@ -24,15 +24,22 @@ function generateRandomList (x, y) {
 
     }
 
-    console.log(randomList);
-    
-    return randomList;
 }
 
 // invoco la funzione
 generateRandomList(1, 100);
 
+console.log(randomList);
 
 // stampo in html il risultato di random list
 numberContainerEl.innerHTML = randomList;
+
+setTimeout(timer, 30000);
+
+function timer () {
+    numberContainerEl.innerHTML = "";
+    prompt("inserisci il primo numero della serie");
+}
+
+
 
