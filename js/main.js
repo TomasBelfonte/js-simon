@@ -45,21 +45,22 @@ console.log(randomList);
 numberContainerEl.innerHTML = randomList;
 
 setTimeout(timer, 30000);
+startTimer ();
 
-// function startTimer (){
-//     setInterval (function () {
+function startTimer (){
+    setInterval (function () {
 
-//         // decremento i secondi passati
-//         time--;
+        // decremento i secondi passati
+        time--;
 
-//         // invoco la funzione che aggiorna l'html
-//         updateTimerEl(time);
-//     }, 1000);
-// }
+        // invoco la funzione che aggiorna l'html
+        updateTimerEl(time);
+    }, 1000);
+}
 
-// function updateTimerEl(seconds) {
-//     timerEl.textContent = `${seconds}`;
-// }
+function updateTimerEl(seconds) {
+    timerEl.textContent = `${seconds}`;
+}
 
 function timer () {
     numberContainerEl.innerHTML = "";
